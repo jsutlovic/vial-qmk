@@ -76,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |----------------------------------------------------------------|
    * |        |HUE|MOD|BR-|RGB|BR+|Spc|MUT|VO-|VO+|   |     |Cycl|    |
    * |----------------------------------------------------------------|
-   * |RESET|REEP|    |                      |DBG|   |   |Prev|Prt|Next|
+   * |     |REEP|    |                      |DBG|   |RST|Prev|Prt|Next|
    * `----------------------------------------------------------------'
    */
 [_FL_L] = LAYOUT_65_ansi(
@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,_______,_______,_______,_______,_______,KC_PGUP,SP_PREV,TB_PREV,TB_NEXT,SP_NEXT,WN_PREV,WN_NEXT, TO(_BL), KC_INS, \
   _______   ,RGB_SAI,RGB_SAD,_______,_______,KC_PGDN,KC_LEFT,KC_DOWN,KC_UP,KC_RGHT,_______, KC_GRV,        _______, KC_END, \
   _______     ,RGB_HUI,RGB_MOD,RGB_VAD,RGB_TOG,RGB_VAI, KC_SPC,KC_MUTE,KC_VOLD,KC_VOLU,_______,     _______, OS_CYCL, _______, \
-  _______,EE_CLR,_______,                _______                       ,     J_DBG,_______, RESET ,KC_MPRV,OS_PRNTL, KC_MNXT
+  _______,EE_CLR,_______,                _______                       ,     J_DBG,_______, QK_BOOT ,KC_MPRV,OS_PRNTL, KC_MNXT
 ),
 
 [_FL_W] = LAYOUT_65_ansi(
@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,_______,_______,_______,_______,_______,KC_PGUP,SP_PREV,TB_PREV,TB_NEXT,SP_NEXT,WN_PREV,WN_NEXT, TO(_BL), KC_INS, \
   _______   ,RGB_SAI,RGB_SAD,_______,_______,KC_PGDN,KC_LEFT,KC_DOWN,KC_UP,KC_RGHT,_______, KC_GRV,        _______, KC_END, \
   _______     ,RGB_HUI,RGB_MOD,RGB_VAD,RGB_TOG,RGB_VAI, KC_SPC,KC_MUTE,KC_VOLD,KC_VOLU,_______,     _______, OS_CYCL, _______, \
-  _______,EE_CLR,_______,                _______                       ,     J_DBG,_______, RESET ,KC_MPRV,OS_PRNTL, KC_MNXT
+  _______,EE_CLR,_______,                _______                       ,     J_DBG,_______, QK_BOOT ,KC_MPRV,OS_PRNTL, KC_MNXT
 ),
 
 [_FL_M] = LAYOUT_65_ansi(
@@ -100,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______,_______,_______,_______,_______,_______,KC_PGUP,SP_PREV,TB_PREV,TB_NEXT,SP_NEXT,WN_PREV,WN_NEXT, TO(_BL), KC_INS, \
   _______   ,RGB_SAI,RGB_SAD,_______,_______,KC_PGDN,KC_LEFT,KC_DOWN,KC_UP,KC_RGHT,_______, KC_GRV,        _______, KC_END, \
   _______     ,RGB_HUI,RGB_MOD,RGB_VAD,RGB_TOG,RGB_VAI, KC_SPC,KC_MUTE,KC_VOLD,KC_VOLU,_______,     _______, OS_CYCL, _______, \
-  _______,EE_CLR,_______,                _______                       ,     J_DBG,_______, RESET ,KC_MPRV,OS_PRNTL, KC_MNXT
+  _______,EE_CLR,_______,                _______                       ,     J_DBG,_______, QK_BOOT ,KC_MPRV,OS_PRNTL, KC_MNXT
 ),
 
 
