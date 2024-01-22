@@ -30,6 +30,7 @@
 #define OS_LAYER() ((uint8_t) (dynamic_keymap_get_keycode(_BL, 4, 5) >> 8) & 0xF)
 
 // Macro defns
+// Custom keycodes
 enum {
     TB_PREV = SAFE_RANGE,
     TB_NEXT,
@@ -80,26 +81,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
 [_FL_L] = LAYOUT_65_ansi(
   KC_ESC , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 , KC_F6 , KC_F7, KC_F8 , KC_F9 , KC_F10 ,KC_F11,KC_F12,   KC_DEL ,OS_PRNT,  \
-  _______,_______,_______,_______,_______,_______,KC_PGUP,USER01,USER03,USER04,USER02,USER05,USER06, TO(_BL), KC_INS, \
+  _______,_______,_______,_______,_______,_______,KC_PGUP,SP_PREV,TB_PREV,TB_NEXT,SP_NEXT,WN_PREV,WN_NEXT, TO(_BL), KC_INS, \
   _______   ,RGB_SAI,RGB_SAD,_______,_______,KC_PGDN,KC_LEFT,KC_DOWN,KC_UP,KC_RGHT,_______, KC_GRV,        _______, KC_END, \
-  _______     ,RGB_HUI,RGB_MOD,RGB_VAD,RGB_TOG,RGB_VAI, KC_SPC,KC_MUTE,KC_VOLD,KC_VOLU,_______,     _______, USER00, _______, \
-  _______,EEP_RST,_______,                _______                       ,     J_DBG,_______, RESET ,KC_MPRV,OS_PRNTL, KC_MNXT
+  _______     ,RGB_HUI,RGB_MOD,RGB_VAD,RGB_TOG,RGB_VAI, KC_SPC,KC_MUTE,KC_VOLD,KC_VOLU,_______,     _______, OS_CYCL, _______, \
+  _______,EE_CLR,_______,                _______                       ,     J_DBG,_______, RESET ,KC_MPRV,OS_PRNTL, KC_MNXT
 ),
 
 [_FL_W] = LAYOUT_65_ansi(
   KC_ESC , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 , KC_F6 , KC_F7, KC_F8 , KC_F9 , KC_F10 ,KC_F11,KC_F12,   KC_DEL ,OS_PRNT,  \
-  _______,_______,_______,_______,_______,_______,KC_PGUP,USER01,USER03,USER04,USER02,USER05,USER06, TO(_BL), KC_INS, \
+  _______,_______,_______,_______,_______,_______,KC_PGUP,SP_PREV,TB_PREV,TB_NEXT,SP_NEXT,WN_PREV,WN_NEXT, TO(_BL), KC_INS, \
   _______   ,RGB_SAI,RGB_SAD,_______,_______,KC_PGDN,KC_LEFT,KC_DOWN,KC_UP,KC_RGHT,_______, KC_GRV,        _______, KC_END, \
-  _______     ,RGB_HUI,RGB_MOD,RGB_VAD,RGB_TOG,RGB_VAI, KC_SPC,KC_MUTE,KC_VOLD,KC_VOLU,_______,     _______, USER00, _______, \
-  _______,EEP_RST,_______,                _______                       ,     J_DBG,_______, RESET ,KC_MPRV,OS_PRNTL, KC_MNXT
+  _______     ,RGB_HUI,RGB_MOD,RGB_VAD,RGB_TOG,RGB_VAI, KC_SPC,KC_MUTE,KC_VOLD,KC_VOLU,_______,     _______, OS_CYCL, _______, \
+  _______,EE_CLR,_______,                _______                       ,     J_DBG,_______, RESET ,KC_MPRV,OS_PRNTL, KC_MNXT
 ),
 
 [_FL_M] = LAYOUT_65_ansi(
   KC_ESC , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 , KC_F6 , KC_F7, KC_F8 , KC_F9 , KC_F10 ,KC_F11,KC_F12,   KC_DEL ,OS_PRNT,  \
-  _______,_______,_______,_______,_______,_______,KC_PGUP,USER01,USER03,USER04,USER02,USER05,USER06, TO(_BL), KC_INS, \
+  _______,_______,_______,_______,_______,_______,KC_PGUP,SP_PREV,TB_PREV,TB_NEXT,SP_NEXT,WN_PREV,WN_NEXT, TO(_BL), KC_INS, \
   _______   ,RGB_SAI,RGB_SAD,_______,_______,KC_PGDN,KC_LEFT,KC_DOWN,KC_UP,KC_RGHT,_______, KC_GRV,        _______, KC_END, \
-  _______     ,RGB_HUI,RGB_MOD,RGB_VAD,RGB_TOG,RGB_VAI, KC_SPC,KC_MUTE,KC_VOLD,KC_VOLU,_______,     _______, USER00, _______, \
-  _______,EEP_RST,_______,                _______                       ,     J_DBG,_______, RESET ,KC_MPRV,OS_PRNTL, KC_MNXT
+  _______     ,RGB_HUI,RGB_MOD,RGB_VAD,RGB_TOG,RGB_VAI, KC_SPC,KC_MUTE,KC_VOLD,KC_VOLU,_______,     _______, OS_CYCL, _______, \
+  _______,EE_CLR,_______,                _______                       ,     J_DBG,_______, RESET ,KC_MPRV,OS_PRNTL, KC_MNXT
 ),
 
 
@@ -121,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TAB,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_LBRC, KC_RBRC, KC_BSLS, KC_DEL, \
   KC_LCTL,  KC_A,   KC_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN, KC_QUOT,        KC_ENT,  KC_PENT, \
   KC_LSFT,         KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,KC_DOT,KC_SLSH,    KC_RSFT,KC_UP,  KC_MPLY, \
-  KC_LCTL, KC_LGUI,KC_LALT,                      KC_SPC,                    KC_RALT,KC_RGUI,KC_RCTRL,KC_LEFT,KC_DOWN, KC_RGHT),
+  KC_LCTL, KC_LGUI,KC_LALT,                      KC_SPC,                    KC_RALT,KC_RGUI,KC_RCTL,KC_LEFT,KC_DOWN, KC_RGHT),
 
     [_RGB] = LAYOUT_65_ansi(
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -164,9 +165,9 @@ typedef union {
 
 user_config_t user_config;
 
-void rgb_matrix_indicators_user(void)
+bool rgb_matrix_indicators_user(void)
 {
-    if (IS_LED_ON(host_keyboard_leds(), USB_LED_CAPS_LOCK))
+    if (host_keyboard_led_state().caps_lock)
     {
         rgb_matrix_set_color(CAPS_LED, 0xFF, 0xFF, 0xFF);
     }
@@ -218,6 +219,8 @@ void rgb_matrix_indicators_user(void)
                 break;
         }
     }
+
+    return false;
 }
 
 /*
@@ -281,59 +284,54 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     switch (keycode) {
         case SP_PREV:
-        case USER01:
             switch (os_layer) {
                 case OS_LINUX:
                     SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_H))));
                     break;
                 case OS_MAC:
-                    SEND_STRING(SS_LCTRL(SS_TAP(X_LEFT)));
+                    SEND_STRING(SS_LCTL(SS_TAP(X_LEFT)));
                     break;
                 case OS_WIN:
-                    SEND_STRING(SS_LGUI(SS_LCTRL(SS_TAP(X_LEFT))));
+                    SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_LEFT))));
                     break;
             }
             break;
         case SP_NEXT:
-        case USER02:
             switch (os_layer) {
                 case OS_LINUX:
                     SEND_STRING(SS_LGUI(SS_LALT(SS_TAP(X_L))));
                     break;
                 case OS_MAC:
-                    SEND_STRING(SS_LCTRL(SS_TAP(X_RIGHT)));
+                    SEND_STRING(SS_LCTL(SS_TAP(X_RIGHT)));
                     break;
                 case OS_WIN:
-                    SEND_STRING(SS_LGUI(SS_LCTRL(SS_TAP(X_RIGHT))));
+                    SEND_STRING(SS_LGUI(SS_LCTL(SS_TAP(X_RIGHT))));
                     break;
             }
             break;
         case TB_PREV:
-        case USER03:
             switch (os_layer) {
                 case OS_LINUX:
                 case OS_WIN:
-                    SEND_STRING(SS_LCTRL(SS_TAP(X_PGUP)));
+                    SEND_STRING(SS_LCTL(SS_TAP(X_PAGE_UP)));
                     break;
                 case OS_MAC:
-                    SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_LBRACKET))));
+                    SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_LEFT_BRACKET))));
                     break;
             }
             break;
         case TB_NEXT:
-        case USER04:
             switch (os_layer) {
                 case OS_LINUX:
                 case OS_WIN:
-                    SEND_STRING(SS_LCTRL(SS_TAP(X_PGDOWN)));
+                    SEND_STRING(SS_LCTL(SS_TAP(X_PAGE_DOWN)));
                     break;
                 case OS_MAC:
-                    SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_RBRACKET))));
+                    SEND_STRING(SS_LGUI(SS_LSFT(SS_TAP(X_RIGHT_BRACKET))));
                     break;
             }
             break;
         case WN_PREV:
-        case USER05:
             switch (os_layer) {
                 case OS_LINUX:
                     SEND_STRING(SS_LGUI(SS_TAP(X_H)));
@@ -344,7 +342,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
         case WN_NEXT:
-        case USER06:
             switch (os_layer) {
                 case OS_LINUX:
                     SEND_STRING(SS_LGUI(SS_TAP(X_L)));
@@ -355,7 +352,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
         case OS_CYCL:
-        case USER00:
             if (record->event.pressed) {
                 os_layer++;
                 if (os_layer > _FL_M) os_layer = _FL_L;
