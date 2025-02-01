@@ -29,6 +29,7 @@ extern "C" {
 
 extern uint8_t keyboard_idle;
 extern uint8_t keyboard_protocol;
+extern uint8_t bluetooth_report_protocol;
 
 /* host driver */
 void           host_set_driver(host_driver_t *driver);
@@ -38,7 +39,6 @@ host_driver_t *host_get_driver(void);
 uint8_t host_keyboard_leds(void);
 led_t   host_keyboard_led_state(void);
 void    host_keyboard_send(report_keyboard_t *report);
-void    host_nkro_send(report_nkro_t *report);
 void    host_mouse_send(report_mouse_t *report);
 void    host_system_send(uint16_t usage);
 void    host_consumer_send(uint16_t usage);
